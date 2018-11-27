@@ -12,7 +12,7 @@ import java.util.List;
 public class Example {
 
 
-    @RequestMapping("v1")
+    @RequestMapping("v2")
     public @ResponseBody ResponseEntity<String> example() {
         List<String> list = new ArrayList<>();
         //return a simple list of strings
