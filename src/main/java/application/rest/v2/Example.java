@@ -17,7 +17,7 @@ public class Example {
 
 
     @RequestMapping("v2")
-    public @ResponseBody ResponseEntity<String> example() {
+    public @ResponseBody ResponseEntity<String> example() throws Exception{
         List<String> list = new ArrayList<>();
         
         URL url = new URL("http://testejava.default.svc.cluster.local:8080/health");
