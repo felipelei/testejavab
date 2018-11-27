@@ -51,6 +51,7 @@ public class Example {
 		in.close();
 
 		//print result
+        list.add("\n");
         list.add("Resposta do endpoint (http://18.228.226.15:31000/health) :");
 		list.add(response.toString());
 
