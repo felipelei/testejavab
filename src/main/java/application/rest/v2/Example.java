@@ -1,4 +1,4 @@
-package application.rest.v1;
+package application.rest.v2;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,7 +16,7 @@ public class Example {
     public @ResponseBody ResponseEntity<String> example() {
         List<String> list = new ArrayList<>();
         //return a simple list of strings
-        list.add("Parabens, Aplicação em cima e rodando");
+        list.add("Parabens, Aplicação v2 em cima e rodando...");
         return new ResponseEntity<String>(list.toString(), HttpStatus.OK);
     }
 
