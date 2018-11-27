@@ -37,6 +37,23 @@ public class Example {
         list.add("Resposta do endpoint (http://testejava.default.svc.cluster.local:8080/health) :");
 		list.add(response.toString());
 
+
+        url = new URL("http://18.228.226.15:31000/health");
+        con = (HttpURLConnection) url.openConnection();
+        con.setRequestMethod("GET");
+
+        in = new BufferedReader(new InputStreamReader(con.getInputStream()));
+		response = new StringBuffer();
+
+		while ((inputLine = in.readLine()) != null) {
+			response.append(inputLine);
+		}
+		in.close();
+
+		//print result
+        list.add("Resposta do endpoint (http://18.228.226.15:31000/health) :");
+		list.add(response.toString());
+
         return new ResponseEntity<String>(list.toString(), HttpStatus.OK);
     }
 
